@@ -1,8 +1,12 @@
+//Title: WebViewer React Component
+//Author: William Lasater
+// Date: 21 July 2020
+
 import React, {useEffect, useRef, useState} from 'react';
 import WebViewer from '@pdftron/webviewer';
 import axios from 'axios';
 
-const SidePanelControls = (props)=>
+const PDFViewerWindow = (props)=>
 {
   const selectedFile = useRef(null);
   const [filesList, setFilesList] = useState([]);
@@ -152,4 +156,4 @@ const SidePanelControls = (props)=>
     </div>
   );
 };
-export default SidePanelControls;
+export default PDFViewerWindow;
