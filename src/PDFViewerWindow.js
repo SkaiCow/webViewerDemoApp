@@ -2,6 +2,9 @@
 //Author: William Lasater
 // Date: 21 July 2020
 
+//notes: This component can take a lot of modulations but I put eveything in one file for proof of concept
+//       I propably used too many sates and refs as I was learning their meaning as I went. throw them out as needed.
+
 import React, {useEffect, useRef, useState} from 'react';
 import WebViewer from '@pdftron/webviewer';
 import axios from 'axios';
@@ -21,13 +24,18 @@ const PDFViewerWindow = (props)=>
     if(!WebViewerLoaded.current)
     {
       updateList();
+      //this init the WebViewer with a set of settings
       WebViewer(
         {
           path: '/pdfviewer',
-          annotationUser:'William L.'
+          annotationUser:'William L.',
+          //More settings can be placed here
         },
         viewer.current,
       ).then((instance) => {
+
+          //Change/remove visual components of the WebViewer here and assign managers here
+
           let {annotManager} = instance;
           setInstance(instance);
           WebViewerLoaded.current = true;
@@ -128,7 +136,7 @@ const PDFViewerWindow = (props)=>
     })
   }
 
-
+  //css stuff
   const controlStyles = {
     position:"absolute",
     left:"0px",
