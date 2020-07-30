@@ -139,11 +139,10 @@ class DropSignature extends React.Component
 		console.log("going to try and save PDF now.");
 		let {docViewer, annotManager, Annotations} = this.DocInstance;
 		const xfdfString = await annotManager.exportAnnotations({widgets:true, fields:true});
-		console.log(xfdfString);
 		const doc =  docViewer.getDocument();
     const data = await doc.getFileData({xfdfString});
   	const arr = new Uint8Array(data);
-  	const file = new File([arr], "thisIsAFile.pdf", {type: 'application/pdf'});
+  	const file = new File([arr], "thisIsAFile.pdf", {type: 'application/pdf'}); // this is a temp file name
 		const signdata = new FormData();
 		signdata.append('file', file);
   	axios.post('http://localhost:8000/upload',signdata)

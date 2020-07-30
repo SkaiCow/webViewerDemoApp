@@ -5,6 +5,7 @@ var cors = require('cors');
 var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
+const { PDFNet } = require('@pdftron/pdfnet-node');
 
 app.use(cors());
 app.use(express.static("./public"));

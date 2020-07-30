@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@pdftron/pdfnet-node": "^7.1.1-1",
     "@pdftron/webviewer": "^6.3.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
