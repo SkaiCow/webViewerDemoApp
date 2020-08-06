@@ -1,17 +1,17 @@
 (function(){/*
  *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
+Copyright (c) Microsoft Corporation.
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
 
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 *****************************************************************************/
 var H="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this;function I(f){var l=0;return function(){return l<f.length?{done:!1,value:f[l++]}:{done:!0}}}var N="function"==typeof Object.defineProperties?Object.defineProperty:function(f,l,e){f!=Array.prototype&&f!=Object.prototype&&(f[l]=e.value)};function O(){O=function(){};H.Symbol||(H.Symbol=P)}var P=function(){var f=0;return function(l){return"jscomp_symbol_"+(l||"")+f++}}();
 function R(){O();var f=H.Symbol.iterator;f||(f=H.Symbol.iterator=H.Symbol("iterator"));"function"!=typeof Array.prototype[f]&&N(Array.prototype,f,{configurable:!0,writable:!0,value:function(){return S(I(this))}});R=function(){}}function S(f){R();f={next:f};f[H.Symbol.iterator]=function(){return this};return f}function T(f,l){return Object.prototype.hasOwnProperty.call(f,l)}

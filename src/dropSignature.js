@@ -83,13 +83,21 @@ class DropSignature extends React.Component
 				{
 					console.log("oh look a signature");
 					let flags = new Annotations.WidgetFlags();
+					const fieldManager = annotManager.getFieldManager();
+
+					const field = new Annotations.Forms.Field(
+  					'ClientSig',
+  					{
+    					type:'Sig',
+    					flags: new Annotations.WidgetFlags(),
+  					}
+					);
+
+					fieldManager.addField(field);
 
 					builtAnnotation = new Annotations.SignatureWidgetAnnotation(
-						new Annotations.Forms.Field('ClientSig',{
-							type:'Sig',
-							flags,
-						})
-						,{
+						field,
+						{
 						appearance: '_DEFAULT',
 						appearances: {
 							_DEFAULT: {
